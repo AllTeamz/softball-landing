@@ -53,11 +53,11 @@ features                                  :
 
   - title                                 : Updated in real-time
     description                           : Information constantly updated. No need to pay for a new release!
-    fontawesome_icon_name                 : alarm-plus
+    fontawesome_icon_name                 : alarm
   
   - title                                 : Helpful notifications
     description                           : Automatic notifications of important NCAA and NAIA dates and coach changes. Never miss a deadline or opportunity.
-    fontawesome_icon_name                 : bell-on
+    fontawesome_icon_name                 : bell
 
   - title                                 : # New Feature Title
     description                           : # New Feature Description
