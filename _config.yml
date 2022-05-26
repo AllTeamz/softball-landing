@@ -37,6 +37,13 @@ description                               : Own the recruiting process by puttin
 
 plugins:
   - jekyll-seo-tag
+  - jekyll-analytics
+
+# Analytics
+jekyll_analytics:
+  GoogleAnalytics:          # Add, if you want to track with Google Analytics
+    id: UA-34749448-4          # Required - replace with your tracking id
+    anonymizeIp: false      # Optional - Default: false - set to true for anonymized tracking
 
 
 # Feature List                            Edit, add or remove features to be presented.
