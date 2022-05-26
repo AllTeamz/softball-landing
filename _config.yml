@@ -32,7 +32,8 @@ youtube_username                          :
 logo                                      : assets/sbicon.jpeg
 image                                     : assets/sbicon.jpeg
 site_name                                 : Softball Bound - Recruiting Assistant App for College Softball 
-
+title                                     : Softball Bound - Recruiting Assistant App for College Softball
+description                               : Own the recruiting process by putting every coach in your pocket!
 
 plugins:
   - jekyll-seo-tag
