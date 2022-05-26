@@ -29,7 +29,11 @@ instagram_username                        : softballbound_app
 twitter_username                          : allteamz
 github_username                           : 
 youtube_username                          :
+logo                                      : assets/sbicon.jpeg
+image                                     : assets/sbicon.jpeg
 
+plugins:
+  - jekyll-seo-tag
 
 
 # Feature List                            Edit, add or remove features to be presented.
