@@ -31,6 +31,8 @@ github_username                           :
 youtube_username                          :
 logo                                      : assets/sbicon.jpeg
 image                                     : assets/sbicon.jpeg
+site_name                                 : Softball Bound - Recruiting Assistant App for College Softball 
+
 
 plugins:
   - jekyll-seo-tag
