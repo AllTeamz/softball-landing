@@ -44,7 +44,7 @@ jekyll_analytics:
   GoogleAnalytics:          # Add, if you want to track with Google Analytics
     id: UA-34749448-3          # Required - replace with your tracking id
     anonymizeIp: false      # Optional - Default: false - set to true for anonymized tracking
-
+google_analytics: UA-34749448-4
 
 # Feature List                            Edit, add or remove features to be presented.
 features                                  :
