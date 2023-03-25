@@ -3,22 +3,26 @@
     {% for feature in site.features %}
 
     {% if feature.title %}
-    <div class="feature">
-        <div>
-            <span class="fa-stack fa-1x">
-                <i class="iconBack fas fa-circle fa-stack-2x"></i>
-                <i class="iconTop fas fa-{{ feature.fontawesome_icon_name }} fa-stack-1x"></i>
-            </span>
+        <div class="feature">
+            <div class="stars">
+                <span class="fa-stack fa-1x">
+                    <i class="iconBack fas fa-circle fa-stack-2x"></i>
+                    <i class="iconTop fas fa-star fa-stack-1x"></i>
+                  </span>
+                </div>
+            <div class="featureText">
+                <h3>
+                    {{ feature.title }}
+                </h3>
+                
+                {{ feature.review.text }}
+                
+                <p>
+                    "For all my softball friends that are looking to play college softball this app is perfect for sending emails and is so helpful to the recruiting process! It’s so simple as you can can just type in what you prefer in a school and it will give you a list of options. I am a Junior class of 2022 and I used this app to find schools that fit my needs and I just recently committed to a school of my dreams!! Thank you softball bound!"
+                </p>
+                 
+            </div>
         </div>
-        <div class="featureText">
-            <h3>
-                {{ feature.title }}
-            </h3>
-            <p>
-                {{ feature.description }}
-            </p>
-        </div>
-    </div>
     {% endif %}
 
     {% endfor %}
