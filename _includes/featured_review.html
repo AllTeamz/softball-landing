@@ -1,7 +1,5 @@
-{% for review in site.featured_reviews %}
-    <div class="featured-review">
-        <h1>{{ site.featured_review.stars }}</h1>
-        <h3>{{ site.featured_review.title }}</h3>
-        <h2>{{ site.featured_review.review }}</h2>
-    </div>
-{% endfor %}
+<div class="featured-review">
+    <h1>{{ site.featured_review[0].stars }}</h1>
+    <h3>{{ site.featured_review[0].title }}</h3>
+    <h2>{{ site.featured_review[0].review }}</h2>
+</div>
