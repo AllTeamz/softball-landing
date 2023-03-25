@@ -44,7 +44,7 @@ google_analytics: UA-34749448-3
 #Featured Review                          Add a featured review to be presented under the header and before the features list
 featured_review                           :
 
-  - title                                 : So helpful!!
+  - title                                 : Thank you Softball Bound
     review                                : "For all my softball friends that are looking to play college softball this app is perfect for sending emails and is so helpful to the recruiting process! It’s so simple as you can can just type in what you prefer in a school and it will give you a list of options. I am a Junior class of 2022 and I used this app to find schools that fit my needs and I just recently committed to a school of my dreams!! Thank you softball bound!"
     fontawesome_icon_name                 : star
 
@@ -90,7 +90,7 @@ cover_image                               : assets/softball_header.jpeg         
 cover_overlay_color                       : "#363b3d"
 cover_overlay_transparency                : 0.8
 
-device_color                              : yellow                                     # Set to: blue, black, yellow, coral or white.
+device_color                              : red                                     # Set to: blue, black, yellow, coral or white.
 
 body_background_color                     : "#ffffff"
 
