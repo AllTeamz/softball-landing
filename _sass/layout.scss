@@ -604,25 +604,33 @@ nav > ul li a:active {
 
 // Featured Review
 .featured-review {
-    background-color: #f2f2f2;
-    border-radius: 10px;
-    padding: 20px;
-    margin: 20px auto;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center; /* Add text alignment center */
+	background-color: #f2f2f2;
+	border-radius: 10px;
+	padding: 20px;
+	margin: 20px auto;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	text-align: center;
+	max-width: 400px; /* Limit the width of the review */
+	margin: 20px auto;
 }
 
 .featured-review h1 {
-    margin: 0 0 10px; /* Add bottom margin */
+	margin: 0 0 10px;
+	font-size: 24px; /* Increase the font size */
+	color: #333; /* Change the text color */
 }
 
 .featured-review h2 {
-    margin: 10px 0; /* Add top and bottom margin */
+	margin: 10px 0;
+	font-size: 18px; /* Increase the font size */
+	color: #666; /* Change the text color */
 }
 
 .featured-review h3 {
-    margin: 10px 0; /* Add top and bottom margin */
-    font-weight: normal; /* Remove bold text */
+	margin: 10px 0;
+	font-size: 16px; /* Increase the font size */
+	color: #999; /* Change the text color */
+	font-weight: normal;
 }
 
 // Footer
