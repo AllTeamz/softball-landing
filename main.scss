@@ -1,11 +1,20 @@
 ---
-# Front matter comment to ensure Jekyll properly reads file.
 ---
 
-$body-color: {{ site.body_background_color }};
+@charset "utf-8";
 
-$header-image: "{{ site.cover_image }}";
-$device-color: "assets/{{ site.device_color }}.png";
+// Site Variables
+$body-color: #ffffff !default;
+$header-image: none !default;
+$device-color: none !default;
+
+// Import base styles and components
+@import
+    "variables",
+    "base",
+    "layout",
+    "github-markdown",
+    "reviews";
 
 $accent-color: {{ site.link_color }};
 
@@ -30,7 +39,8 @@ $feature-icons-background-color: {{ site.feature_icons_background_color }};
 $social-icons-foreground-color: {{ site.social_icons_foreground_color }};
 $social-icons-background-color: {{ site.social_icons_background_color }};
 
-@import 
+@import
     "base",
     "layout",
-    "github-markdown"
+    "github-markdown",
+    "reviews";
