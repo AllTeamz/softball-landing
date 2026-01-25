@@ -1,0 +1,50 @@
+---
+layout: null
+---
+
+@charset "utf-8";
+
+// All required variables (must be defined before imports)
+$body-color: #ffffff;
+$accent-color: #1d63ea;
+$header-title-color: #ffffff;
+$app-title-color: #ffffff;
+$app-price-color: rgba(255, 255, 255, 0.9);
+$app-description-color: rgba(255, 255, 255, 0.95);
+
+$feature-title-color: #1a1a1a;
+$feature-text-color: #555555;
+$footer-text-color: #555555;
+
+$header_color: #000000;
+$header_transparency: 0.05;
+
+$image-overlay-color: #1a2332;
+$image-overlay-transparency: 0.7;
+
+$feature-icons-foreground-color: #1d63ea;
+$feature-icons-background-color: transparent;
+
+$social-icons-foreground-color: #555555;
+$social-icons-background-color: transparent;
+
+$text-color: #1a1a1a;
+$text-muted: #555555;
+$text-light: #888888;
+
+$bg-white: #ffffff;
+$bg-light: #f8f9fa;
+$bg-dark: #1a1a1a;
+
+$border-color: #e5e5e5;
+$border-light: #f0f0f0;
+$border-dark: #d0d0d0;
+
+$header-image: url('/assets/95AE1950-A7F2-470E-BFD7-FDCD561D0E9D.png');
+$device-color: url('/assets/black.png');
+
+// Import components
+@import "base";
+@import "layout";
+@import "github-markdown";
+@import "reviews";

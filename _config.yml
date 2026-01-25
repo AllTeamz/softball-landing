@@ -1,141 +1,254 @@
-#page title
-page_title                                : Softball Bound - Recruiting Assistant App for College Softball                                        # Automatically populates with app name if not set and if iOS app ID is set. Otherwise enter manually.
+# Encoding and Core Settings
+encoding: UTF-8
+strict_front_matter: true
 
-# App Info
-ios_app_id                                : 1222443580                                # Required. Enter iOS app ID to automatically populate name, price and icons (e.g. 718043190).
-ios_app_country                           : us                                        # Required outside USA. Enter 2 letter country code as in https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
-
-app_icon                                  : # assets/appicon.png                      # Automatically populates if not set and if iOS app ID is set.  Otherwise enter path to icon file manually.
-app_name                                  :                                           # Automatically populates if not set and if iOS app ID is set.  Otherwise enter manually.
-app_price                                 :                                           # Automatically populates if not set and if iOS app ID is set.  Otherwise enter manually.
-app_description                           : Own the recruiting process by putting every coach in your pocket!
-
-enable_smart_app_banner                   : true                                      # Set to true to show a smart app banner at top of page on mobile devices.
-
-
-
-# Information About Yourself
-your_name                                 : AllTeamz                               
-your_link                                 : https://allteamz.com                     
-your_city                                 : Los Angeles                                
-email_address                             : ryan@allteamz.com
-facebook_username                         :                                           
-instagram_username                        : softballbound_app
-twitter_username                          : allteamz
-github_username                           : 
-youtube_username                          :
-logo                                      : assets/sbicon.jpeg
-image                                     : assets/sbicon.jpeg
-site_name                                 : Softball Bound - Recruiting Assistant App for College Softball 
-title                                     : Softball Bound - Recruiting Assistant App for College Softball
-description                               : Own the recruiting process by putting every coach in your pocket!
-
+# Jekyll Configuration
 plugins:
   - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-redirect-from
+  - jekyll-minifier
 
-# Analytics
-google_analytics: UA-34749448-3
+# Analytics and Performance Configuration
+google_analytics: G-5N6HK2SMN0
+google_analytics_options:
+  siteSpeedSampleRate: 100
+  anonymizeIp: true
+  cookieDomain: auto
 
-#Featured Review                          Add a featured review to be presented under the header and before the features list
-featured_review                           :
-  - stars                                 : ⭐️⭐️⭐️⭐️⭐️
-    title                                 : Great App! by user 'Mark K'
-    review                                : Very helpful having all this contact information in one place! My daughter has since committed to Duke University to play softball. This app has been a valuable resource throughout the recruiting process and it's definitely worth the few bucks that it costs.
-    fontawesome_icon_name                 : star
+# Site Settings
+page_title: "Softball Bound - College Softball Recruiting Assistant App | Find Your Perfect Program"
+title: "Softball Bound - College Softball Recruiting Assistant App | Find Your Perfect Program"
+description: "Softball Bound helps athletes own their college softball recruiting process with real-time access to over 1,200 NCAA, NAIA, and JUCO programs. Get coach contacts, program stats, and recruiting deadlines all in one place."
+keywords: "college softball recruiting, softball recruiting app, NCAA softball programs, NAIA softball, JUCO softball, college softball coaches, athletic recruiting"
+tagline: "Streamline Your College Softball Recruiting Journey"
+site_name: "Softball Bound"
+author: AllTeamz
 
-# Feature List                            Edit, add or remove features to be presented.
-features                                  :
+# App Info
+ios_app_id: 1222443580
+ios_app_country: us
+app_icon: /assets/sbicon.jpeg
+app_name: Softball Bound
+app_price: ""
+app_description: "1,200+ College Programs. One App. Your Recruiting Edge."
+enable_smart_app_banner: true
 
-  - title                                 : Easy to use interface
-    description                           : Sort and views schools by state, division, conference, or name.
-    fontawesome_icon_name                 : sort
-    
-  - title                                 : All NCAA, NAIA, and JUCO schools
-    description                           : Every college with softball teams, over 1200 schools.
-    fontawesome_icon_name                 : school
+# Social Media and Contact
+your_name: AllTeamz
+your_link: https://allteamz.com
+your_city: Los Angeles
+email_address: ryan@allteamz.com
+facebook_username: allteamz
+instagram_username: allteamz
+twitter_username: allteamz
+github_username:
+youtube_username:
+logo: /assets/sbicon.jpeg
+image: assets/sbicon.jpeg
 
-  - title                                 : Contact information
-    description                           : Coach contact information for every school. Phone, email, and website.
-    fontawesome_icon_name                 : phone
+# Social Media Meta
+og_type: website
+og_image: assets/sbicon.jpeg
+og_site_name: "Softball Bound"
+twitter_card: summary_large_image
+twitter_creator: "@allteamz"
+twitter_site: "@allteamz"
 
-  - title                                 : Important educational info
-    description                           : Size of school, graduation rates, percentage of freshman returning, average salary after graduation, average GPA and test scores (SAT, ACT)
-    fontawesome_icon_name                 : graduation-cap
+# Redirect Configuration
+defaults:
+  - scope:
+      path: "assets/screenshot"
+    values:
+      screenshot: true
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+      redirect_from:
+        - /app
+        - /ios
+        - /download
+        - /install
+        - /softball
+        - /recruiting
+        - /college-softball
+        - /ncaa
+        - /naia
+        - /juco
+        - /softballbound
+        - /softball-bound
+        - /softball_bound
+        - /softballapp
+        - /softball-app
+        - /recruit
+        - /recruiting-app
+        - /college
+        - /coaches
 
-  - title                                 : Updated in real-time
-    description                           : Information constantly updated. No need to pay for a new release or download an app update!
-    fontawesome_icon_name                 : marker
-  
-  - title                                 : Helpful notifications
-    description                           : Automatic notifications of important NCAA and NAIA dates and coach changes. Never miss a deadline or opportunity.
-    fontawesome_icon_name                 : bell
+# Asset Paths
+screenshot_path: "assets/yellow_ss.svg"
+assets_path: "assets"
 
-  - title                                 : # New Feature Title
-    description                           : # New Feature Description
-    fontawesome_icon_name                 : # Enter Font Awesome icon name (e.g. star). Find icons on fontawesome.com/icons.
+# Asset Caching and Processing
+assets:
+  compress:
+    css: true
+    js: true
+  cache: true
+  cdn: false
+  skip_baseurl_with_cdn: false
+  skip_prefix_with_cdn: false
+  prefix: "/assets"
+  digest: true
+  source_maps: false
+  destination: "/assets"
+  compression: true
+  gzip: false
 
+# Performance Settings
+compress_html:
+  clippings: all
+  comments: ["<!-- ", " -->"]
+  endings: all
+  ignore:
+    envs: [development]
+  blanklines: false
+  profile: false
+  startings: [html, head, body]
 
+jekyll-minifier:
+  exclude: ['*.xml']
+  uglifier_args:
+    harmony: true
+  compress_css: true
+  compress_javascript: true
+  js_compressor: uglifier
+  css_compressor: sass
+  html_compressor: zlib
 
-# Theme Settings
-topbar_color                              : "#000000"
-topbar_transparency                       : 0.1
-topbar_title_color                        : "#ffffff"
+# Build Settings
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter: rouge
 
-cover_image                               : assets/softball_header.jpeg                    # Replace with alternative image path or image URL.
-cover_overlay_color                       : "#363b3d"
-cover_overlay_transparency                : 0.8
-
-device_color                              : yellow                                     # Set to: blue, black, yellow, coral or white.
-
-body_background_color                     : "#ffffff"
-
-link_color                                : "#1d63ea"
-
-app_title_color                           : "#ffffff"
-app_price_color                           : "#ffffff"
-app_description_color                     : "#ffffff"
-
-feature_title_color                       : "#000000"
-feature_text_color                        : "#666666"
-
-feature_icons_foreground_color            : "#1d63ea"
-feature_icons_background_color            : "#e6e6e6"
-
-social_icons_foreground_color             : "#666666"
-social_icons_background_color             : "#e6e6e6"
-
-footer_text_color                         : "#666666"
-
-
-
-
-
-
-
-
-
-
-
-
-
-####################################################
-### Jekyll Configuration. No need to touch this. ###
-####################################################
-
-# Set the Sass partials directory, as we're using @imports
+# SASS Configuration
 sass:
-  style: :compressed # You might prefer to minify using :compressed
+  style: compressed
+  implementation: sass-embedded
+  sass_dir: _sass
+  load_paths:
+    - _sass
+    - node_modules
 
-# Exclude these files from your production _site
+# Encoding and Processing
+encoding: UTF-8
+strict_front_matter: true
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: highlight
+
+# Exclude files from build
 exclude:
   - LICENSE
   - README.md
   - CNAME
+  - vendor
+  - vendor/bundle
+  - vendor/cache
+  - vendor/gems
+  - vendor/ruby
+  - node_modules
+  - tmp
+  - .sass-cache
+  - .jekyll-cache
+  - .git
 
+# Theme Settings
+topbar_color: "#000000"
+topbar_transparency: 0.05
+topbar_title_color: "#ffffff"
+
+cover_image: /assets/95AE1950-A7F2-470E-BFD7-FDCD561D0E9D.png
+cover_overlay_color: "#1a2332"
+cover_overlay_transparency: 0.7
+
+device_color: /assets/black.png
+body_background_color: "#ffffff"
+
+screenshot_path: /assets/yellow_ss.svg
+
+link_color: "#1d63ea"
+
+app_title_color: "#ffffff"
+app_price_color: "rgba(255, 255, 255, 0.9)"
+app_description_color: "rgba(255, 255, 255, 0.95)"
+
+feature_title_color: "#1a1a1a"
+feature_text_color: "#555555"
+
+feature_icons_foreground_color: "#1d63ea"
+feature_icons_background_color: "transparent"
+
+social_icons_foreground_color: "#555555"
+social_icons_background_color: "transparent"
+
+footer_text_color: "#555555"
+
+# Feature List
+features:
+  - title: Every Program at Your Fingertips
+    description: Instantly access 1,200+ NCAA, NAIA, and JUCO softball programs with comprehensive stats, academic info, and program details.
+    fontawesome_icon_name: school
+
+  - title: Message Coaches Directly
+    description: Get verified phone numbers, emails, and social links for coaching staff. No gatekeepers, no guessing — just direct connections.
+    fontawesome_icon_name: phone
+
+  - title: Find Your Fit in Seconds
+    description: Filter by state, division, conference, or academic requirements. Stop scrolling through schools that don't match your goals.
+    fontawesome_icon_name: sort
+
+  - title: Know If Your GPA Makes the Cut
+    description: See graduation rates, academic requirements, and student retention before you waste time on schools that aren't realistic.
+    fontawesome_icon_name: graduation-cap
+
+  - title: Never Miss a Coaching Change
+    description: Get real-time updates when programs hire new coaches or change recruiting priorities.
+    fontawesome_icon_name: marker
+
+  - title: Deadline Reminders That Save You
+    description: NCAA and NAIA recruiting windows close fast. Smart alerts ensure you never miss your shot.
+    fontawesome_icon_name: bell
+
+# Collections
 collections:
   pages:
     output: true
     permalink: /:path/
 
-# Markdown rendering
-markdown: kramdown
+# Jekyll Feed Configuration
+feed:
+  path: feed.xml
+  posts_limit: 20
+  excerpt_only: true
+
+# Jekyll SEO Tag Configuration
+social:
+  name: Softball Bound
+  links:
+    - https://twitter.com/allteamz
+    - https://www.facebook.com/allteamz
+    - https://www.instagram.com/allteamz
+
+# Additional SEO Settings
+lang: en_US
+locale: en_US
+url: "https://allteamz.com"
+baseurl: ""
