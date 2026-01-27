@@ -1,5 +1,5 @@
 // Service Worker for offline capability and performance
-const CACHE_VERSION = 'softball-bound-v1';
+const CACHE_VERSION = 'softball-bound-v2';
 const CACHE_ASSETS = [
   '/',
   '/assets/css/style.css',
@@ -41,7 +41,7 @@ self.addEventListener('activate', function(event) {
   );
 });
 
-// Fetch event - serve from cache, fallback to network
+// Fetch event - network first, fallback to cache
 self.addEventListener('fetch', function(event) {
   // Skip cross-origin requests
   if (!event.request.url.startsWith(self.location.origin)) {
@@ -49,32 +49,25 @@ self.addEventListener('fetch', function(event) {
   }
 
   event.respondWith(
-    caches.match(event.request)
+    fetch(event.request)
       .then(function(response) {
-        // Cache hit - return response
-        if (response) {
+        // Check if valid response
+        if (!response || response.status !== 200 || response.type !== 'basic') {
           return response;
         }
 
-        // Clone the request
-        const fetchRequest = event.request.clone();
+        // Clone the response and cache it
+        const responseToCache = response.clone();
+        caches.open(CACHE_VERSION)
+          .then(function(cache) {
+            cache.put(event.request, responseToCache);
+          });
 
-        return fetch(fetchRequest).then(function(response) {
-          // Check if valid response
-          if (!response || response.status !== 200 || response.type !== 'basic') {
-            return response;
-          }
-
-          // Clone the response
-          const responseToCache = response.clone();
-
-          caches.open(CACHE_VERSION)
-            .then(function(cache) {
-              cache.put(event.request, responseToCache);
-            });
-
-          return response;
-        });
+        return response;
+      })
+      .catch(function() {
+        // Network failed, try cache
+        return caches.match(event.request);
       })
   );
 });
