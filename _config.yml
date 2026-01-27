@@ -11,7 +11,7 @@ plugins:
   - jekyll-minifier
 
 # Analytics and Performance Configuration
-google_analytics: G-5N6HK2SMN0
+google_analytics: G-BNPLMS274F
 google_analytics_options:
   siteSpeedSampleRate: 100
   anonymizeIp: true
